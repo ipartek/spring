@@ -1,4 +1,4 @@
-package com.ipartek.com;
+package com.ipartek.com.spring.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

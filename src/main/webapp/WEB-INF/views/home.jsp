@@ -13,6 +13,7 @@
 
 <ol>
 	<li>Ejemplo Controller pasando parametro<a href="saludo/ander">Saludo</a></li>	
+	<li>Gestionar Tabla Vehiculos<a href="vehiculo">CRUD Vehiculos</a></li>
 </ol>
 
 </body>

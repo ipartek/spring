@@ -19,6 +19,8 @@
 		<jsp.version>2.1</jsp.version>
 		<jstl.version>1.2</jstl.version>
 		
+		<mysql.version>5.1.39</mysql.version>
+		
 		<junit.version>4.7</junit.version>
 		
 	</properties>
@@ -118,6 +120,32 @@
 			<version>${jstl.version}</version>
 		</dependency>
 	
+		<!-- Validation -->
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.1.0.Final</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>5.2.4.Final</version>
+		</dependency>
+		
+		<!-- Persitencia -->					
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>	
+		
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>${mysql.version}</version>
+		</dependency>
+	
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -126,6 +154,8 @@
 			<scope>test</scope>
 		</dependency>        
 	</dependencies>
+	
+	
     <build>
         <plugins>
             <plugin>
