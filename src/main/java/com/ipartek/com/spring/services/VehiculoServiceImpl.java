@@ -1,5 +1,6 @@
 package com.ipartek.com.spring.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,15 +14,15 @@ public class VehiculoServiceImpl implements VehiculoService {
 
 	private static final long serialVersionUID = 1L;
 
-	private List<Vehiculo> vehiculos;
+	private ArrayList<Vehiculo> vehiculos;
 
 	@Autowired
 	private VehiculoDAO VehiculoDAOImpl;
 
 	@Override
 	public List<Vehiculo> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Vehiculo> list = (ArrayList<Vehiculo>) VehiculoDAOImpl.getAll();
+		return list;
 	}
 
 }
