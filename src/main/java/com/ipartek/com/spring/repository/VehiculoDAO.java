@@ -9,8 +9,10 @@ import com.ipartek.com.spring.domain.Vehiculo;
 
 public interface VehiculoDAO extends Serializable {
 
+	void setDataSource(DataSource dataSource);
+
 	List<Vehiculo> getAll();
 
-	void setDataSource(DataSource dataSource);
+	boolean create(Vehiculo v);
 
 }

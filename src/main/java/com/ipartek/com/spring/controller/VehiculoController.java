@@ -3,6 +3,8 @@ package com.ipartek.com.spring.controller;
 import java.util.List;
 import java.util.Locale;
 
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,10 +40,31 @@ public class VehiculoController {
 		List<Vehiculo> list = (List<Vehiculo>) vehiculoService.getAll();
 
 		model.addAttribute("vehiculos", list);
+		model.addAttribute("total", list.size());
 
 		logger.info("Listando Vehiculos " + list.size());
 
 		return "vehiculo/index";
+	}
+
+	/**
+	 * Ir al formulario de edicion<br>
+	 * Escucha en la ruta: http://localhost:8080/vehiculo?edit
+	 * 
+	 */
+	@RequestMapping(value = "/vehiculo", method = RequestMethod.GET, params = "edit")
+	public String irFomulario(Locale locale, Model model) {
+
+		logger.info("Ir formulario edición");
+		model.addAttribute("vehiculo", new Vehiculo());
+		return "vehiculo/form";
+	}
+
+	@RequestMapping(value = "/vehiculo", method = RequestMethod.POST)
+	public String edicion(@Valid Vehiculo vehiculo) {
+
+		logger.info("editando vehiculo " + vehiculo.toString());
+		return "vehiculo/form";
 	}
 
 }
