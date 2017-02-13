@@ -1,9 +1,14 @@
 package com.ipartek.com.spring.domain;
 
+import javax.validation.constraints.Size;
+
 public class Vehiculo {
 
 	private long id;
+
+	@Size(min = 2, max = 150, message = "La marca debe tener una longitud entre 3 y 150")
 	private String marca;
+
 	private float precio;
 	private String imagen;
 

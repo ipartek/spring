@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -61,9 +62,13 @@ public class VehiculoController {
 	}
 
 	@RequestMapping(value = "/vehiculo", method = RequestMethod.POST)
-	public String edicion(@Valid Vehiculo vehiculo) {
-
+	public String edicion(@Valid Vehiculo vehiculo, BindingResult bindingResult) {
 		logger.info("editando vehiculo " + vehiculo.toString());
+		if (bindingResult.hasErrors()) {
+			logger.warn("No pasa la validación");
+		} else {
+			logger.warn("validación correcta");
+		}
 		return "vehiculo/form";
 	}
 

@@ -6,6 +6,7 @@
 
 	<label for="marca">Marca:</label>
 	<form:input path="marca" placeholder="Marca"/>
+	<form:errors path="marca" cssClass="error"/>
 	<br>
 	
 	
