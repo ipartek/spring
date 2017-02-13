@@ -17,6 +17,8 @@ Añadido un controlador nuevo para típico ejemplo de Saludar pasando un parametro
 ## TAG 0.2
 Estructura de clases e interfaces necesaria para poder hacer una consulta en BBDD. Solo implementado 'getAll()' para recuperar un listado de Vehiculos.
 
+## TAG 0.3
+Validación de datos enviados por formulario usando JSR-303
 
 ### Installation 
 
