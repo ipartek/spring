@@ -14,14 +14,12 @@ public class VehiculoServiceImpl implements VehiculoService {
 
 	private static final long serialVersionUID = 1L;
 
-	private ArrayList<Vehiculo> vehiculos;
-
 	@Autowired
-	private VehiculoDAO VehiculoDAOImpl;
+	private VehiculoDAO vehiculoDAO;
 
 	@Override
 	public List<Vehiculo> getAll() {
-		ArrayList<Vehiculo> list = (ArrayList<Vehiculo>) VehiculoDAOImpl.getAll();
+		ArrayList<Vehiculo> list = (ArrayList<Vehiculo>) vehiculoDAO.getAll();
 		return list;
 	}
 

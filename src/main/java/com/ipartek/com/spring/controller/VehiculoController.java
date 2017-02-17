@@ -28,10 +28,6 @@ public class VehiculoController {
 	@Autowired
 	private VehiculoService vehiculoService;
 
-	public void setVehiculoService(VehiculoService vehiculoService) {
-		this.vehiculoService = vehiculoService;
-	}
-
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -56,7 +52,7 @@ public class VehiculoController {
 	@RequestMapping(value = "/vehiculo", method = RequestMethod.GET, params = "edit")
 	public String irFomulario(Locale locale, Model model) {
 
-		logger.info("Ir formulario edición");
+		logger.info("Ir formulario ediciï¿½n");
 		model.addAttribute("vehiculo", new Vehiculo());
 		return "vehiculo/form";
 	}
@@ -65,9 +61,9 @@ public class VehiculoController {
 	public String edicion(@Valid Vehiculo vehiculo, BindingResult bindingResult) {
 		logger.info("editando vehiculo " + vehiculo.toString());
 		if (bindingResult.hasErrors()) {
-			logger.warn("No pasa la validación");
+			logger.warn("No pasa la validaciï¿½n");
 		} else {
-			logger.warn("validación correcta");
+			logger.warn("validaciï¿½n correcta");
 		}
 		return "vehiculo/form";
 	}
