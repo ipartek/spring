@@ -1,7 +1,7 @@
 # Spring 3
-![Alt text](screenshots/spring logo.png?raw=true �logo spring�)
+![Alt text](screenshots/spring logo.png?raw=true 'logo spring')
 
-Proyecto Web para aprender el manejo b�sico del FrameWork Spring 3:
+Proyecto Web para aprender el manejo básico del FrameWork Spring 3:
 
 	- Spring MVC
 	- Spring JDBC Templates	
