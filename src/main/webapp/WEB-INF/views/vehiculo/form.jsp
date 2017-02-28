@@ -1,6 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
-<h1>formulario edicion</h1>
+<h1><spring:message code="form.edit" text="Editar Formulario" /></h1>
 
 <form:form method="post" modelAttribute="vehiculo">
 

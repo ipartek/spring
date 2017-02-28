@@ -6,7 +6,10 @@ public class Vehiculo {
 
 	private long id;
 
-	@Size(min = 2, max = 150, message = "La marca debe tener una longitud entre 3 y 150")
+	@Size(min = 2, max = 150, message = "Size.marca"
+	// message = "marca '${validatedValue}' incorrecta, minimo {min} y maximo
+	// {max}"
+	)
 	private String marca;
 
 	private float precio;
