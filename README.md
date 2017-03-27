@@ -1,5 +1,5 @@
 # Spring 3
-![Alt text](screenshots/spring logo.png?raw=true 'logo spring')
+![Alt text](screenshot.png?raw=true 'logo spring')
 
 Proyecto Web para aprender el manejo básico del FrameWork Spring 3:
 
