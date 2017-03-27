@@ -36,6 +36,8 @@ Seguridad básica y que tiene por defecto Spring con su propio login ['admin','a
 	- web.xml => Añadir filtro y referencia a security-context.xml
 	- /WEB-INF/spring/security-context.xml
 	
+## TAG 0.6 - Logger
+Trazas de logo para escribir en un fichero de texto '${catalina.home}/logs/spring/trazas.log'
 
 ### Installation 
 
