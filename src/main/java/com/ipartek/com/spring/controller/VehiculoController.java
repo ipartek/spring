@@ -23,7 +23,7 @@ import com.ipartek.com.spring.services.VehiculoService;
 @Controller
 public class VehiculoController {
 
-	private static final Logger logger = LoggerFactory.getLogger(VehiculoController.class);
+	private static final Logger LOG = LoggerFactory.getLogger(VehiculoController.class);
 
 	@Autowired
 	private VehiculoService vehiculoService;
@@ -39,7 +39,7 @@ public class VehiculoController {
 		model.addAttribute("vehiculos", list);
 		model.addAttribute("total", list.size());
 
-		logger.info("Listando Vehiculos " + list.size());
+		LOG.info("Listando Vehiculos " + list.size());
 
 		return "vehiculo/index";
 	}
@@ -52,18 +52,18 @@ public class VehiculoController {
 	@RequestMapping(value = "/vehiculo", method = RequestMethod.GET, params = "edit")
 	public String irFomulario(Locale locale, Model model) {
 
-		logger.info("Ir formulario edici�n");
+		LOG.info("Ir formulario edici�n");
 		model.addAttribute("vehiculo", new Vehiculo());
 		return "vehiculo/form";
 	}
 
 	@RequestMapping(value = "/vehiculo", method = RequestMethod.POST)
 	public String edicion(@Valid Vehiculo vehiculo, BindingResult bindingResult) {
-		logger.info("editando vehiculo " + vehiculo.toString());
+		LOG.info("editando vehiculo " + vehiculo.toString());
 		if (bindingResult.hasErrors()) {
-			logger.warn("No pasa la validaci�n");
+			LOG.warn("No pasa la validaci�n");
 		} else {
-			logger.warn("validaci�n correcta");
+			LOG.warn("validaci�n correcta");
 		}
 		return "vehiculo/form";
 	}
