@@ -16,6 +16,8 @@ Añadido un controlador nuevo para típico ejemplo de Saludar pasando un paramet
 
 ## TAG 0.2 - JdbcTemplate
 Estructura de clases e interfaces necesaria para poder hacer una consulta en BBDD. Solo implementado 'getAll()' para recuperar un listado de Vehiculos.
+### TAG 0.2.1 - Test JdbcTemplate
+Ejemplo básico para cargar un contexto de test y probar un DAO.
 
 ## TAG 0.3 - Validacion
 Validación de datos enviados por formulario usando JSR-303
@@ -37,7 +39,7 @@ Seguridad básica y que tiene por defecto Spring con su propio login ['admin','a
 	- /WEB-INF/spring/security-context.xml
 	
 ## TAG 0.6 - Logger
-Trazas de logo para escribir en un fichero de texto '${catalina.home}/logs/spring/trazas.log'
+Trazas de logs para escribir en un fichero de texto '${catalina.home}/logs/spring/trazas.log'
 
 ### Installation 
 
