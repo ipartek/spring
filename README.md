@@ -33,10 +33,9 @@ Internacionalizaión i18n - 3 Idiomas ( Castellano, Euskara e Ingles ).
 
 ## TAG 0.5 - Security
 
-Seguridad básica y que tiene por defecto Spring con su propio login ['admin','admin'].
+[a relative link](doc/security.md)
 
-	- web.xml => Añadir filtro y referencia a security-context.xml
-	- /WEB-INF/spring/security-context.xml
+
 	
 ## TAG 0.6 - Logger
 Trazas de logs para escribir en un fichero de texto '${catalina.home}/logs/spring/trazas.log'
