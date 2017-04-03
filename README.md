@@ -33,7 +33,7 @@ Internacionalizaión i18n - 3 Idiomas ( Castellano, Euskara e Ingles ).
 
 ## TAG 0.5 - Security
 
-[a relative link](doc/security.md)
+[leer más](doc/security.md)
 
 
 	
