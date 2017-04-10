@@ -13,13 +13,28 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class SecurityController {
 
+	/**
+	 * Accion principal al ejecutar la App.
+	 * 
+	 * Model:
+	 * <ol>
+	 * 		<li>title: titulo de la JSP</li>
+	 *      <li>message: Mensaje par el usuario</li>
+	 *      <li>path: ruta de la jsp que se ejecuta</li>
+	 * </ol>
+	 * <br>
+	 * View:
+	 * 	 	pagina principal index.jsp	
+	 * 
+	 * @return ModelAndView
+	 */
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
 
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Ongi Etorri");
 		model.addObject("message", "Estamos en la pagina principal!");
-		model.addObject("path", "\\src\\main\\webapp\\WEB-INF\\views\\login.jsp");
+		model.addObject("path", "\\src\\main\\webapp\\WEB-INF\\views\\index.jsp");
 		model.setViewName("index");
 		return model;
 
@@ -29,10 +44,9 @@ public class SecurityController {
 	public ModelAndView adminPage() {
 
 		ModelAndView model = new ModelAndView();
-		model.addObject("title", "Spring Security Login Form - Database Authentication");
-		model.addObject("message", "This page is for ROLE_ADMIN only!");
+		model.addObject("title", "Backoffice");
+		model.addObject("message", "Solo accesible para ROLE_ADMIN !");
 		model.setViewName("admin");
-
 		return model;
 
 	}

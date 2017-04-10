@@ -5,13 +5,28 @@
 	<h1>${title}</h1>
 	<h2>${message}</h2>
 	<p>${path}</p>
+	<p>Usuario: <b>${pageContext.request.userPrincipal.name}</b></p>
 	
 	
 	<i>*Logeate para poder acceder a  la parte de administración</i>
 	<a href="<c:url value='login' />">Ir al Login</a>
 
+	
+
+	<sec:authorize access="hasRole('ROLE_ADMIN')">
+		<h2>Excelente</h2>
+		<img src="resources/img/srburns.gif"/>
+	</sec:authorize>
+
+
+	<sec:authorize access="hasRole('ROLE_USER') and not hasRole('ROLE_ADMIN')">
+		<h2>ROSKILLAS, Ummm!!!!</h2>
+		<img src="resources/img/homer-roskillas.gif"/>	
+	</sec:authorize>
+	
+	
 	<sec:authorize access="hasRole('ROLE_USER')">
-		<!-- For login user -->
+		<!-- LogOut -->
 		<c:url value="/j_spring_security_logout" var="logoutUrl" />
 		<form action="${logoutUrl}" method="post" id="logoutForm">
 			<input type="hidden" name="${_csrf.parameterName}"
@@ -25,11 +40,14 @@
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
 			<h2>
-				User : ${pageContext.request.userPrincipal.name} | <a
-					href="javascript:formSubmit()"> Logout</a>
+				<a href="javascript:formSubmit()"> Logout</a>
 			</h2>
 		</c:if>
+	
 	</sec:authorize>
+	
+	
+	
 	
 <!-- 
 Podemos usar otros tipos de SpEL ( Spring Expression Language ) como:
