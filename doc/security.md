@@ -35,11 +35,11 @@ Crear tablas necesarias para almacener "usuarios" y "roles"
 	
 ###### juego datos pruebas
 	
-	INSERT INTO users(username,password,enabled)	VALUES ('administrador','123456', true);
-	INSERT INTO users(username,password,enabled)	VALUES ('usuario','123456', true);
-	INSERT INTO user_roles (username, role)	VALUES ('administrador', 'ROLE_USER');
-	INSERT INTO user_roles (username, role) VALUES ('administrador', 'ROLE_ADMIN');
-	INSERT INTO user_roles (username, role) VALUES ('usuario', 'ROLE_USER');
+	INSERT INTO users(username,password,enabled)	VALUES ('Sr Burn','123456', true);
+	INSERT INTO users(username,password,enabled)	VALUES ('homer','123456', true);
+	INSERT INTO user_roles (username, role)	VALUES ('Sr Burn', 'ROLE_USER');
+	INSERT INTO user_roles (username, role) VALUES ('Sr Burn', 'ROLE_ADMIN');
+	INSERT INTO user_roles (username, role) VALUES ('homer', 'ROLE_USER');
 	
 	
 ### spring-security.xml
