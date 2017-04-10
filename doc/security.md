@@ -35,12 +35,14 @@ Crear tablas necesarias para almacener "usuarios" y "roles"
 	
 ###### juego datos pruebas
 	
-	INSERT INTO users(username,password,enabled)	VALUES ('Sr Burn','123456', true);
-	INSERT INTO users(username,password,enabled)	VALUES ('homer','123456', true);
+	
+	INSERT INTO users(username,password,enabled)	VALUES ('Sr Burn','e10adc3949ba59abbe56e057f20f883e', true);
+	INSERT INTO users(username,password,enabled)	VALUES ('homer','e10adc3949ba59abbe56e057f20f883e', true);
 	INSERT INTO user_roles (username, role)	VALUES ('Sr Burn', 'ROLE_USER');
 	INSERT INTO user_roles (username, role) VALUES ('Sr Burn', 'ROLE_ADMIN');
 	INSERT INTO user_roles (username, role) VALUES ('homer', 'ROLE_USER');
-	
+
+password esta encriptado con md5, para los dos usuarios hemos usado de password "123456"	
 	
 ### spring-security.xml
 Configuración de la seguridad en Spring, ver fichero en **src\main\webapp\WEB-INF\spring\security-context.xml**	
