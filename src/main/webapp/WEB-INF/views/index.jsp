@@ -1,21 +1,36 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <html>
 <body>
 	<h1>${title}</h1>
 	<h2>${message}</h2>
 	<p>${path}</p>
 	<p>Usuario: <b>${pageContext.request.userPrincipal.name}</b></p>
+	<hr>
 	
+	<form:form method="post" action="uploadImagen" enctype="multipart/form-data">
+			Selecciconar Imagen: <input type="file" name="imagen">						
+			<input type="submit" value="Subir">			
+			<p><i>*formato permitido image/jpeg.</i></p>
+			<p><i>*Tamaño maximo 1Mb</i></p>		
+	 </form:form>
+	 
+	 <!-- mensaje de retorno al subir la imagen -->	 
+	 ${mensaje}
+	 <img src="${imagen}" alt="texto alternativo" style="max-width: 200px; height: auto;" />
+	 	
+	 <hr>
 	
+	<h2>Seguridad</h2>
 	<i>*Logeate para poder acceder a  la parte de administración</i>
 	<a href="<c:url value='login' />">Ir al Login</a>
 
 	
 
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-		<h2>Excelente</h2>
-		<img src="resources/img/srburns.gif"/>
+		<h2>Excelente</h2>		
+	 	<img src="resources/img/srburns.gif"/>		
 	</sec:authorize>
 
 

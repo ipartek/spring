@@ -7,7 +7,7 @@
 	<name>Spring</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
-	
+
 	<developers>
 		<developer>
 			<id>anderuraga</id>
@@ -15,7 +15,7 @@
 			<email>ander.uraga@gmail.com</email>
 		</developer>
 	</developers>
-	
+
 	<properties>
 		<app.name>spring</app.name>
 
@@ -69,7 +69,7 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		
+
 		<!-- Spring Security JSP Taglib -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -179,6 +179,20 @@
 			<version>${mysql.version}</version>
 		</dependency>
 
+		<!-- Apache Commons FileUpload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
+		<!-- Apache Commons IO -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -186,16 +200,16 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
-           <groupId>org.springframework</groupId>
-           <artifactId>spring-test</artifactId>
-           <version>${org.springframework-version}</version>
-           <scope>test</scope>
-       </dependency>
-		
-		
-		
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
 	</dependencies>
 
 
