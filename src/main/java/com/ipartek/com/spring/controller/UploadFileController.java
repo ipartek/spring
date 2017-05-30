@@ -2,11 +2,6 @@ package com.ipartek.com.spring.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.fileupload.FileUploadBase.SizeLimitExceededException;
 import org.apache.commons.io.FileUtils;
@@ -17,13 +12,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.HandlerExceptionResolver;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class UploadFileController  /*implements HandlerExceptionResolver*/ {
+public class UploadFileController  {
 
 	private static final Logger LOG = LoggerFactory.getLogger(UploadFileController.class);
 
@@ -82,19 +74,8 @@ public class UploadFileController  /*implements HandlerExceptionResolver*/ {
 		LOG.info("Fichero subido " + f.getAbsoluteFile());
 	}
 
-	/*
-	@Override
-	public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler,
-			Exception exception) {
-		LOG.error("resolveException: " + exception.getMessage());
-		Map<String, Object> model = new HashMap<String, Object>();
-		if (exception instanceof MaxUploadSizeExceededException) {
-			model.put("mensaje", exception.getMessage());
-		} else {
-			model.put("mensaje", "Unexpected error: " + exception.getMessage());
-		}		
-		return new ModelAndView("redirect:index", model);
-	}
-	*/
+
+	
+	
 
 }

@@ -7,6 +7,7 @@ Proyecto Web para aprender el manejo básico del FrameWork Spring 3:
 	- Spring JDBC Templates	
 	- Spring Security
 	- Spring AOP	 
+	- Subida Ficheros
 
 Recomendable NO comenzar con el branch 'master', mejor comenzar con los 'TAG' creados para avanzar progresivamente con los nuevos conceptos.
 
@@ -39,6 +40,14 @@ Internacionalizaión i18n - 3 Idiomas ( Castellano, Euskara e Ingles ).
 	
 ## TAG 0.6 - Logger
 Trazas de logs para escribir en un fichero de texto '${catalina.home}/logs/spring/trazas.log'
+
+## TAG 0.7 - File Upload
+Subidas de ficheros ( imagenes con extensión .jpeg, que no pesen mas de 1Mb )
+
+	- Añadir dependencias al pom.xml ( commons-fileupload y commons-io )
+	- bean org.springframework.web.multipart.commons.CommonsMultipartResolver en servlet-context.xml
+	- @Controller UploadFileController
+	- formulario para subir imagenes en index.jsp
 
 ### Installation 
 
